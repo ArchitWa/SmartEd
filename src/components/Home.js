@@ -80,6 +80,8 @@ export default function Home() {
                     <div className='absolute left-[50rem] top-[94rem]'>
                         <img src={Efficient} alt="Person" className='w-[20rem]' />
                     </div>
+
+                    <a className="btns ml-[15rem]" href={process.env.PUBLIC_URL + "chat.html"}>Try Chatting</a>
                 </div>
 
                 <div classname='relative '>
