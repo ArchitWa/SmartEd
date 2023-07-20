@@ -1,4 +1,4 @@
-import { AiOutlineMenu, AiOutlineClockCircle, AiOutlineHome, AiOutlineCalendar, AiOutlineSetting } from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClockCircle, AiOutlineHome, AiOutlineCalendar, AiOutlineSetting, AiFillPlusCircle, AiFillCloseCircle } from 'react-icons/ai'
 import { FaSearch, FaMicrophone } from 'react-icons/fa'
 import { BiBell } from 'react-icons/bi'
 import { BsThreeDotsVertical } from 'react-icons/bs'
@@ -6,13 +6,11 @@ import { BsThreeDotsVertical } from 'react-icons/bs'
 import Logo from '../../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
 
-
 export default function Dashboard() {
     const navigate = useNavigate()
 
     return (
-        <div>
-
+        <div className='animate-fadeIn'>
             <div className='flex flex-nowrap align-middle items-center mt-6'>
                 <a onClick={() => navigate("/")}>
                     <img src={Logo} className='text-black w-12 ml-10 inline-block' />
@@ -28,10 +26,14 @@ export default function Dashboard() {
                     </span>
                 </div>
 
-                <BiBell className='text-black text-[2rem] inline-block ml-[27.5rem] mr-2 cursor-pointer' />
+                <a href={process.env.PUBLIC_URL + "chat.html"} className='cursor-pointer ml-[25rem] mr-2'>
+                    <AiFillPlusCircle className='text-black text-[2rem] inline-block' />
+                </a>
+
+                <BiBell className='text-black text-[1.7rem] inline-block  mr-2 cursor-pointer' />
                 <h1 className='text-gray-500 inline-block -mt-[8px] scale-y-150 font-base opacity-80 text-3xl mr-3 '>|</h1>
                 <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="inline-block w-[2.5rem] h-[2.5rem] border-2 border-green-300 rounded-full mr-2"></img>
-                <h3 className='inline-block mr-10 font-semibold text-2xl'>Archit W.</h3>
+                <h3 className='inline-block  font-semibold text-2xl'>Archit W.</h3>
             </div>
 
             <div className='flex flex-nowrap mt-[3rem]'>
@@ -87,7 +89,7 @@ export default function Dashboard() {
 
 
                             <span className='inline-block ml-6 bg-cyan-100 rounded-full px-2 text-sm font-semibold py-1 text-cyan-500'>2 months left</span>
-                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500'/>
+                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500' />
                         </div>
 
                         <div className='class w-[95%] mx-[2.5%] mt-2 h-[6rem] items-center align-middle flex bg-emerald-200 rounded-2xl overflow-scroll'>
@@ -112,7 +114,7 @@ export default function Dashboard() {
 
 
                             <span className='inline-block ml-6 bg-emerald-100 rounded-full px-2 text-sm font-semibold py-1 text-emerald-500'>15 days left</span>
-                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500'/>
+                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500' />
                         </div>
 
                         <div className='class w-[95%] mx-[2.5%] mt-2 h-[6rem] items-center align-middle flex bg-red-200 rounded-2xl overflow-scroll'>
@@ -137,7 +139,7 @@ export default function Dashboard() {
 
 
                             <span className='inline-block ml-6 bg-red-100 rounded-full px-2 text-sm font-semibold py-1 text-red-500'>1 week left</span>
-                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500'/>
+                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500' />
                         </div>
 
                         <div className='class w-[95%] mx-[2.5%] mt-2 h-[6rem] items-center align-middle flex bg-orange-200 rounded-2xl overflow-scroll'>
@@ -162,7 +164,7 @@ export default function Dashboard() {
 
 
                             <span className='inline-block ml-6 bg-orange-100 rounded-full px-2 text-sm font-semibold py-1 text-orange-500'>2 weeks left</span>
-                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500'/>
+                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500' />
                         </div>
 
                         <div className='class w-[95%] mx-[2.5%] mt-2 h-[6rem] items-center align-middle flex bg-indigo-200 rounded-2xl overflow-scroll'>
@@ -187,10 +189,62 @@ export default function Dashboard() {
 
 
                             <span className='inline-block ml-6 bg-indigo-100 rounded-full px-2 text-sm font-semibold py-1 text-indigo-500'>1 year left</span>
-                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500'/>
+                            <BsThreeDotsVertical className='text-[1.5rem] text-gray-500' />
                         </div>
+                    </div>
+                </div>
 
+                <div className='inline-block ml-10 w-[22%] h-[40rem] bg-white shadow-sm rounded-3xl'>
+                    <div className='py-6 border-b'>
+                        <h2 className='font-semibold text-3xl inline-block ml-6'>Most Active</h2>
+                    </div>
 
+                    <div className='player-card pt-2 pb-3 border-b flex items-center align-middle'>
+                        <div className='flex items-center align-middle w-[11.5rem]'>
+                            <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="inline-block w-[3rem] h-[3rem] border-2 border-yellow-500 ml-2 rounded-full mt-3"></img>
+                            <h3 className='font-semibold text-2xl inline-block ml-4 mt-2'>John Doe</h3>
+                        </div>
+                        <span className='inline-block mt-2 ml-6 bg-yellow-100 rounded-full px-2 text-sm font-semibold py-1 text-yellow-500'>282 lessons</span>
+                    </div>
+
+                    <div className='player-card pt-2 pb-3 border-b flex items-center align-middle'>
+                        <div className='flex items-center align-middle w-[11.5rem]'>
+                            <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="inline-block w-[3rem] h-[3rem] border-2 border-gray-500 ml-2 rounded-full mt-3"></img>
+                            <h3 className='font-semibold text-2xl inline-block ml-4 mt-2'>Me</h3>
+                        </div>
+                        <span className='inline-block mt-2 ml-6 bg-gray-100 rounded-full px-2 text-sm font-semibold py-1 text-gray-500'>182 lessons</span>
+                    </div>
+
+                    <div className='player-card pt-2 pb-3 border-b flex items-center align-middle'>
+                        <div className='flex items-center align-middle w-[11.5rem]'>
+                            <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="inline-block w-[3rem] h-[3rem] border-2 border-amber-700 ml-2 rounded-full mt-3"></img>
+                            <h3 className='font-semibold text-2xl inline-block ml-4 mt-2'>Jack Doe</h3>
+                        </div>
+                        <span className='inline-block mt-2 ml-6 bg-amber-100 rounded-full px-2 text-sm font-semibold py-1 text-amber-600'>42 lessons</span>
+                    </div>
+
+                    <div className='player-card pt-2 pb-3 border-b flex items-center align-middle'>
+                        <div className='flex items-center align-middle w-[11.5rem]'>
+                            <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="inline-block w-[3rem] h-[3rem] border-2 border-crystal ml-2 rounded-full mt-3"></img>
+                            <h3 className='font-semibold text-2xl inline-block ml-4 mt-2'>Jill Doe</h3>
+                        </div>
+                        <span className='inline-block mt-2 ml-6 bg-white rounded-full px-2 text-sm font-semibold py-1 text-black'>1 lesson</span>
+                    </div>
+
+                    <div className='player-card pt-2 pb-3 border-b flex items-center align-middle'>
+                        <div className='flex items-center align-middle w-[11.5rem]'>
+                            <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="inline-block w-[3rem] h-[3rem] border-2 border-crystal ml-2 rounded-full mt-3"></img>
+                            <h3 className='font-semibold text-2xl inline-block ml-4 mt-2'>Jim Doe</h3>
+                        </div>
+                        <span className='inline-block mt-2 ml-6 bg-white rounded-full px-2 text-sm font-semibold py-1 text-black'>0 lessons</span>
+                    </div>
+
+                    <div className='player-card pt-2 pb-3 border-b flex items-center align-middle'>
+                        <div className='flex items-center align-middle w-[11.5rem]'>
+                            <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="inline-block w-[3rem] h-[3rem] border-2 border-crystal ml-2 rounded-full mt-3"></img>
+                            <h3 className='font-semibold text-2xl inline-block ml-4 mt-2'>Jane Doe</h3>
+                        </div>
+                        <span className='inline-block mt-2 ml-6 bg-white rounded-full px-2 text-sm font-semibold py-1 text-black'>0 lessons</span>
                     </div>
                 </div>
             </div>

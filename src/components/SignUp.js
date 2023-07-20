@@ -40,7 +40,7 @@ export default function SignUp() {
                             <input type="text" placeholder="Name" />
                             <input type="email" placeholder="Email" />
                             <input type="password" placeholder="Password" />
-                            <a className="btns cursor-pointer" onClick={() => navigate("/")}>Sign Up</a>
+                            <a className="btns cursor-pointer" onClick={() => navigate("/dashboard")}>Sign Up</a>
                         </form>
                     </div>
 
@@ -56,7 +56,7 @@ export default function SignUp() {
                             <input type="email" placeholder="Email" />
                             <input type="password" placeholder="Password" />
                             <a className="text-black text-[14px] [text-decoration:none] my-[15px]" href="#">Forgot your password?</a>
-                            <a className="btns cursor-pointer" onClick={() => navigate("/")}>Sign In</a>
+                            <a className="btns cursor-pointer" onClick={() => navigate("/dashboard")}>Sign In</a>
                         </form>
                     </div>
 

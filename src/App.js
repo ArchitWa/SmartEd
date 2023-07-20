@@ -6,8 +6,6 @@ import WithoutNav from './components/navs/WithoutNav';
 import Home from "./components/Home"
 import Forum from './components/forum/Forum'
 import Dashboard from './components/dashboard/Dashboard'
-// import Events from './components/Events'
-// import Bazaar from './components/bazaar/Bazaar'
 import SignUp from './components/SignUp'
 
 
@@ -30,6 +28,7 @@ export default function App() {
         <Route element={<WithoutNav />}>
           <Route path="/signup" element={<SignUp />} />
           <Route path='/dashboard' element={<Dashboard/>} />
+
           <Route exact path='/' element={<Home />} />
         </Route>
       </Routes>
